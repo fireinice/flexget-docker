@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-if [ -f ~/.flexget/.config-lock ]; then
-    rm ~/.flexget/.config-lock
+if [ -f /config/.config-lock ]; then
+    rm /config/.config-lock
 fi
 flexget daemon start
