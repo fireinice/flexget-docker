@@ -6,7 +6,7 @@ MAINTAINER zigler zhang <zigler.zhang@gmail.com>
 VOLUME   /config /data /scripts
 
 # Install FlexGet
-RUN      pip3 install -U pip && pip3 install flexget==2.19.0 transmissionrpc
+RUN      pip3 install --no-cache-dir -U pip && pip3 install --no-cache-dir flexget==2.19.0 transmissionrpc
 
 # Add start script
 COPY     start.sh /scripts/
