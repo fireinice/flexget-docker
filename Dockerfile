@@ -1,4 +1,4 @@
-FROM     python:3.6-alpine
+FROM     python:3.9-slim
 
 MAINTAINER zigler zhang <zigler.zhang@gmail.com>
 
@@ -6,7 +6,8 @@ MAINTAINER zigler zhang <zigler.zhang@gmail.com>
 VOLUME   /config /data /scripts
 
 # Install FlexGet
-RUN      pip3 install --no-cache-dir -U pip && pip3 install --no-cache-dir flexget==3.1.143 transmissionrpc==0.11
+RUN      pip3 install --no-cache-dir -U pip && \
+    pip3 install --no-cache-dir flexget==3.1.143 transmission-rpc==3.3.0
 
 # Add start script
 COPY     start.sh /scripts/
